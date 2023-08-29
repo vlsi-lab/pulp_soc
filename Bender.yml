@@ -50,6 +50,19 @@ dependencies:
   register_interface:     { git: "https://github.com/pulp-platform/register_interface.git", version: 0.3.1 }
 
 sources:
+
+  # keccak ip
+  - files:
+      - rtl/keccak_ip/gen_sv/keccak_reg_pkg.sv
+      - rtl/keccak_ip/gen_sv/keccak_reg_top.sv
+      - rtl/keccak_ip/keccak_globals.vhd
+      - rtl/keccak_ip/keccak_round_constants_gen.vhd
+      - rtl/keccak_ip/keccak_round.vhd
+      - rtl/keccak_ip/keccak_cu.sv
+      - rtl/keccak_ip/keccak_datapath.vhd
+      - rtl/keccak_ip/keccak.vhd
+      - rtl/keccak_ip/keccak_top.sv
+
   # pulp_soc
   - include_dirs:
       - rtl/include
