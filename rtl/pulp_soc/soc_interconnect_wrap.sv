@@ -57,7 +57,7 @@ module soc_interconnect_wrap
        XBAR_TCDM_BUS.Master     l2_interleaved_slaves[NR_L2_PORTS], // Connects to the interleaved memory banks
        XBAR_TCDM_BUS.Master     l2_private_slaves[2], // Connects to core-private memory banks
        XBAR_TCDM_BUS.Master     boot_rom_slave, //Connects to the bootrom
-       AXI_BUS.Master 		keccak_slave,	// Used to communicate with keccak
+       AXI_BUS.Master 		keccak_slave	// Used to communicate with keccak
        );
 
     //**Do not change these values unles you verified that all downstream IPs are properly parametrized and support it**

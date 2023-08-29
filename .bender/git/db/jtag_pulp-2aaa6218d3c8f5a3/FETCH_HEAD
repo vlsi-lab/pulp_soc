@@ -1,0 +1,16 @@
+585d8a4a9a7fd16bb86128a07c4682db29879815	not-for-merge	branch 'bugfix_clk_bypass_feature' of https://github.com/pulp-platform/jtag_pulp
+8327a5a499aaaeab1128ddb1cbc8d71526eab043	not-for-merge	branch 'dbg_dev' of https://github.com/pulp-platform/jtag_pulp
+605a3de07f581a9c839fb45eb0c6fe73e8507670	not-for-merge	branch 'master' of https://github.com/pulp-platform/jtag_pulp
+98f47ca0d00cc907cb6e1bee48b414b5f0bca6fa	not-for-merge	branch 'rebase-dbg-dev' of https://github.com/pulp-platform/jtag_pulp
+4c6fb49ae9fba35d46776cbc924c2ce504a34dd7	not-for-merge	branch 'remove-jg-config' of https://github.com/pulp-platform/jtag_pulp
+e4c63857b72292a3208be64dcd52530ed10a3713	not-for-merge	tag 'pulpissimo-v1.0' of https://github.com/pulp-platform/jtag_pulp
+5ace3495a6d35552e2009e9dece75452ac3cd82b	not-for-merge	tag 'v0.1' of https://github.com/pulp-platform/jtag_pulp
+5ace3495a6d35552e2009e9dece75452ac3cd82b	not-for-merge	tag 'v0.1.0' of https://github.com/pulp-platform/jtag_pulp
+d22e828aef0484c79355d97d12de044c97e1f20f	not-for-merge	tag 'v0.2.0' of https://github.com/pulp-platform/jtag_pulp
+605a3de07f581a9c839fb45eb0c6fe73e8507670	not-for-merge	tag 'v0.3.0' of https://github.com/pulp-platform/jtag_pulp
+97bf91c3ee393e32c4176db335af236ce6f0be55	not-for-merge	tag 'vega_v1.0.0' of https://github.com/pulp-platform/jtag_pulp
+d5f2bc1e4667ee8d5c003aa703dc3b2db8de7395	not-for-merge	tag 'vega_v1.0.1' of https://github.com/pulp-platform/jtag_pulp
+5510cacf38325525638abb650f201ddac2040de7	not-for-merge	tag 'vega_v1.0.2' of https://github.com/pulp-platform/jtag_pulp
+5c72c8d78e5212d982500e7a89faff662196e4c0	not-for-merge	tag 'vega_v1.0.3' of https://github.com/pulp-platform/jtag_pulp
+14b12efa34f0a753a94d78038905c0d1d331abf4	not-for-merge	tag 'vega_v1.0.4' of https://github.com/pulp-platform/jtag_pulp
+e560290de3d1d2876142e9d44593b2f884e2aea5	not-for-merge	tag 'vega_v1.0.5' of https://github.com/pulp-platform/jtag_pulp
