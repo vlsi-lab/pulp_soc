@@ -163,7 +163,7 @@ packages:
     revision: ~
     version: ~
     source:
-      Path: /home/alessandra.dolmeta/pulpissimo_keccak/pulp_soc/./register_interface
+      Path: /home/alessandra.dolmeta/pulp_soc/./register_interface
     dependencies:
       - axi
       - common_cells

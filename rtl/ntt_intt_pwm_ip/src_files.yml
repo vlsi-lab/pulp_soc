@@ -1,0 +1,29 @@
+false_adder:
+  incdirs:
+      ../register_interface/include
+      ../register_interface/vendor/lowrisc_opentitan/include
+  files:
+      - gen_sv/ntt_intt_pwm_reg_pkg.sv
+      - gen_sv/ntt_intt_pwm_reg_top.sv
+      - BRAM.vhd
+      - BROM_TW.vhd
+      - adder.vhd
+      - address_generator.vhd
+      - reg_N_level_rst_n.vhd
+      - bN_2to1mux.vhd
+      - barrett.vhd
+      - butterfly.vhd
+      - full_adder.vhd
+      - half_adder.vhd
+      - intmul.vhd
+      - modadd.vhd
+      - modmul.vhd
+      - modsub.vhd
+      - montgomery.vhd
+      - ntt_intt_pwm.vhd
+      - param.vhd
+      - reg_rst.vhd
+      - shiftreg.vhd
+      - ntt_intt_pwm_top.sv
+  vlog_opts:
+    - -L register_interface_lib

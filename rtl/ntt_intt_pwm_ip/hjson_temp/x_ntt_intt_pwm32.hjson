@@ -1,0 +1,82 @@
+{
+    name: "ntt_intt_pwm",
+    clock_primary: "clk_i",
+    reset_primary: "rst_ni",
+    bus_device: "reg",
+    bus_host: "",
+
+    regwidth: "32",
+    registers: [
+       
+        { name: "DIN",
+            desc: "Subword of input of ntt_intt_pwm module",
+            swaccess: "wo",
+            fields: [
+                { bits: "31:0"
+                }
+            ],
+        },
+       
+        { name: "DOUT",
+            desc: "Subword of results.",
+            swaccess: "ro",
+            hwaccess: "hwo",
+            hwext: "true",
+            fields: [
+                { bits: "31:0"
+                }
+            ],
+      },
+      { name: "CTRL",
+        desc: "Controls signals of ntt_intt_pwm",
+        swaccess: "wo",
+        hwaccess: "hro",
+        fields: [
+            { bits: "0", name: "load_a_f",
+				desc: "Make the ntt_intt_pwm starts collecting a_f"
+            }
+			{ bits: "1", name: "load_a_i",
+				desc: "Make the ntt_intt_pwm starts collecting a_i"
+            }
+			{ bits: "2", name: "load_b_f",
+				desc: "Make the ntt_intt_pwm starts collecting b_f"
+            }
+			{ bits: "3", name: "load_b_i",
+				desc: "Make the ntt_intt_pwm starts collecting b_i"
+            }
+			{ bits: "4", name: "read_a",
+				desc: "Make the ntt_intt_pwm starts reading a"
+            }
+			{ bits: "5", name: "read_b",
+				desc: "Make the ntt_intt_pwm starts reading b"
+            }
+			{ bits: "6", name: "start_ab",
+				desc: "---"
+            }
+			{ bits: "7", name: "start_ntt",
+				desc: "Make the ntt_intt_pwm starts ntt"
+            }
+			{ bits: "8", name: "start_pwm",
+				desc: "Make the ntt_intt_pwm starts pwm"
+            }
+			{ bits: "9", name: "start_intt",
+				desc: "Make the ntt_intt_pwm starts intt"
+            }
+            { bits: "10", name: "clear",
+				desc: "Clear the ntt_intt_pwm"
+            }
+        ],
+      },
+	{ name: "STATUS"
+	  desc: " Contains status information about ntt_intt_pwm"
+	  swaccess: "ro",
+	  hwaccess: "hwo",
+      hwext: "true",
+	  fields: [
+	      { bits: "0", name: "STATUS",
+		desc: "If set output is valid"
+	      }
+	  ]	
+	}
+    ],
+}

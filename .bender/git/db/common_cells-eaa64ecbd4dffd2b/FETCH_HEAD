@@ -15,7 +15,7 @@ ac52f10b814f57ef5853bce43cf5d65e6fd1b447	not-for-merge	branch 'fix-style' of htt
 5a7cab001f1f5e15d2e847c6c5f787102f8b91a7	not-for-merge	branch 'id_queue-exists_data' of https://github.com/pulp-platform/common_cells
 3b995113c59bcf8ddb225aaa8a18f9e61afe757a	not-for-merge	branch 'master' of https://github.com/pulp-platform/common_cells
 7de94d7666802543a4b81e7659027ec1bca86542	not-for-merge	branch 'max_pow_two-tbenz' of https://github.com/pulp-platform/common_cells
-037111ac2628b2db8081bfd752e0b8427fb7bc78	not-for-merge	branch 'multicast-xbar' of https://github.com/pulp-platform/common_cells
+c415fc6a42a37acc01343c412461be80aa2f81d0	not-for-merge	branch 'multicast-xbar' of https://github.com/pulp-platform/common_cells
 8cb2dadab8dddeadcf134f1a4cc0a2221dc217b9	not-for-merge	branch 'new/multiaddr-decode' of https://github.com/pulp-platform/common_cells
 79d5041e8f54c282cd74144a0690190d89a4cfe4	not-for-merge	branch 'new/stream-join-dynamic' of https://github.com/pulp-platform/common_cells
 0b8c10c21c9f810509bbd7bf86cfbdc4e6626c8e	not-for-merge	branch 'pulp-soc' of https://github.com/pulp-platform/common_cells

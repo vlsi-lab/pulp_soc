@@ -1,5 +1,5 @@
 988ef2fe1b23aeb8605e4c965d9d9930f7ef8a14	not-for-merge	branch 'bugfix/vfcpk' of https://github.com/pulp-platform/fpnew
-566282b503893069458d4014fd1241df4735be90	not-for-merge	branch 'develop' of https://github.com/pulp-platform/fpnew
+d6e581628f3517a1fb1257507d3214e599f7859d	not-for-merge	branch 'develop' of https://github.com/pulp-platform/fpnew
 bd19574341388ffbed4e1bdf8532730f01608b87	not-for-merge	branch 'develop-remove-jg-config' of https://github.com/pulp-platform/fpnew
 7e4647b4c92fd0be57ce4139af044177700d85e3	not-for-merge	branch 'feat/half-freq-div' of https://github.com/pulp-platform/fpnew
 0fdd399db9c4014145c6104b658b6c9c7563855e	not-for-merge	branch 'feature/expanding_dotp' of https://github.com/pulp-platform/fpnew
@@ -13,7 +13,7 @@ c02011407d136d108e5004b53136642a2e37dfe2	not-for-merge	branch 'fpu_integration' 
 1fffb1c18f0c40e698cfaef6027a8b4526dc95b0	not-for-merge	branch 'fpu_integration2' of https://github.com/pulp-platform/fpnew
 0d7c88cec6a54cfceda2c928e2f0a46de57ef219	not-for-merge	branch 'gurkaynak-patch-1' of https://github.com/pulp-platform/fpnew
 f2e2f0a345ffb33f1b879384689644007dd66c5b	not-for-merge	branch 'gwt_fpu_fpga' of https://github.com/pulp-platform/fpnew
-11659d7ff3580ac3226c6d56a90ef717cdc530e3	not-for-merge	branch 'master' of https://github.com/pulp-platform/fpnew
+79e453139072df42c9ec8f697132ba485d74e23d	not-for-merge	branch 'master' of https://github.com/pulp-platform/fpnew
 8641a058a3731b38fdfe4bc1bb02e36d565f2bc0	not-for-merge	branch 'pulpissimo' of https://github.com/pulp-platform/fpnew
 db1bfb8187fb05f9218046eed09b611bce810641	not-for-merge	branch 'pulpissimo_release' of https://github.com/pulp-platform/fpnew
 81fd163d607224be7c671b25825ae3333ee0a3c3	not-for-merge	branch 'release-0.3.0' of https://github.com/pulp-platform/fpnew
@@ -41,6 +41,7 @@ a03f6f66cf0c6c4e6517b5e4742c3e002c7d4469	not-for-merge	tag 'v0.6.4' of https://g
 b756a39dcdef2db4eb147eb2f86a2369a01ce7b7	not-for-merge	tag 'v0.6.6' of https://github.com/pulp-platform/fpnew
 3116391bf66660f806b45e212b9949c528b4e270	not-for-merge	tag 'v0.7.0' of https://github.com/pulp-platform/fpnew
 d829f388c3d12d49b960c3362cfa9ebaf58c04fe	not-for-merge	tag 'v0.8.0' of https://github.com/pulp-platform/fpnew
+79e453139072df42c9ec8f697132ba485d74e23d	not-for-merge	tag 'v0.8.1' of https://github.com/pulp-platform/fpnew
 aac0e66025b65c145bcdccb23366c9bd5d83140b	not-for-merge	tag 'vega_1.0.0' of https://github.com/pulp-platform/fpnew
 80a445b70a065d7c815117360461e094818b1d8a	not-for-merge	tag 'vega_1.0.1' of https://github.com/pulp-platform/fpnew
 f26cd534fa6a6a105c13380412ec0d8566332644	not-for-merge	tag 'vega_1.0.2' of https://github.com/pulp-platform/fpnew
