@@ -267,55 +267,80 @@ begin
         end if;
 
     end process;
-    
-    
-    dout_cnt_FSM_r: process (clk, reset_or_clear, y)
+  
+  
+    dout_cnt_FSM: process (clk, reset_or_clear, y)
     begin  -- process
         if y=IDLE then
             if reset_or_clear = '1' then -- asynchronous reset (active high)
-                dout_wait_r <= 1;
-                dout_valid_r <= '0';
+                dout_wait <= 1;
+                dout_valid <= '0';
             end if;
         elsif y=WAIT_READ or y=READ then
-            if rising_edge(clk) then
-                if  dout_wait_r=5 or dout_wait_r=6 then
-                    dout_wait_r <= dout_wait_r +1;
-                    dout_valid_r <= '1';
-                elsif dout_wait_r=7 then
-                    dout_wait_r <= dout_wait_r +1;
-                    dout_valid_r <= '0';
-                 elsif dout_wait_r=8 then
-                    dout_wait_r <= 0;
-                    dout_valid_r <= '0';
+            if rising_edge(clk) or falling_edge(clk) then
+                if  dout_wait=5 or dout_wait=6 then
+                    dout_wait <= dout_wait +1;
+                    dout_valid <= '1';
+                elsif dout_wait=7 then
+                    dout_wait <= dout_wait +1;
+                    dout_valid <= '0';
+                 elsif dout_wait=8 then
+                    dout_wait <= 0;
+                    dout_valid <= '0';
                 else
-                    dout_wait_r <= dout_wait_r +1;
+                    dout_wait <= dout_wait +1;
                 end if;
             end if;
         end if;
-    end process;
-
-
-    dout_cnt_FSM_f: process (clk, reset_or_clear, y)
-    begin  -- process
-        if y=WAIT_READ or y=READ then
-            if falling_edge(clk) then
-                if  dout_wait_f=5 or dout_wait_f=6 then
-                    dout_wait_f <= dout_wait_f +1;
-                    dout_valid_f <= '1';
-                elsif dout_wait_f=7 then
-                    dout_wait_f <= dout_wait_f +1;
-                    dout_valid_f <= '0';
-                 elsif dout_wait_f=8 then
-                    dout_wait_f <= 0;
-                    dout_valid_f <= '0';
-                else
-                    dout_wait_f <= dout_wait_f +1;
-                end if;
-            end if;
-        end if;
-    end process;
-    
-    dout_valid <= (not(clk) and dout_valid_f) or (clk and dout_valid_r);
+    end process;  
+--    
+--    dout_cnt_FSM_r: process (clk, reset_or_clear, y)
+--    begin  -- process
+--        if y=IDLE then
+--            if reset_or_clear = '1' then -- asynchronous reset (active high)
+--                dout_wait_r <= 1;
+--                dout_valid_r <= '0';
+--            end if;
+--        elsif y=WAIT_READ or y=READ then
+--            if rising_edge(clk) then
+--                if  dout_wait_r=5 or dout_wait_r=6 then
+--                    dout_wait_r <= dout_wait_r +1;
+--                    dout_valid_r <= '1';
+--                elsif dout_wait_r=7 then
+--                    dout_wait_r <= dout_wait_r +1;
+--                    dout_valid_r <= '0';
+--                 elsif dout_wait_r=8 then
+--                    dout_wait_r <= 0;
+--                    dout_valid_r <= '0';
+--                else
+--                    dout_wait_r <= dout_wait_r +1;
+--                end if;
+--            end if;
+--        end if;
+--    end process;
+--
+--
+--    dout_cnt_FSM_f: process (clk, reset_or_clear, y)
+--    begin  -- process
+--        if y=WAIT_READ or y=READ then
+--            if falling_edge(clk) then
+--                if  dout_wait_f=5 or dout_wait_f=6 then
+--                    dout_wait_f <= dout_wait_f +1;
+--                    dout_valid_f <= '1';
+--                elsif dout_wait_f=7 then
+--                    dout_wait_f <= dout_wait_f +1;
+--                    dout_valid_f <= '0';
+--                 elsif dout_wait_f=8 then
+--                    dout_wait_f <= 0;
+--                    dout_valid_f <= '0';
+--                else
+--                    dout_wait_f <= dout_wait_f +1;
+--                end if;
+--            end if;
+--        end if;
+--    end process;
+--    
+--    dout_valid <= (not(clk) and dout_valid_f) or (clk and dout_valid_r);
     
 
     ---ntt_intt processes----------------------------------------------------------
