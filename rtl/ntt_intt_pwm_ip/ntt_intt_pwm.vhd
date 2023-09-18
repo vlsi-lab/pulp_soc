@@ -277,7 +277,7 @@ begin
                 dout_valid <= '0';
             end if;
         elsif y=WAIT_READ or y=READ then
-            
+            if rising_edge(clk) then
                 if  dout_wait=5 or dout_wait=6 then
                     dout_wait <= dout_wait +1;
                     dout_valid <= '1';
@@ -290,10 +290,30 @@ begin
                 else
                     dout_wait <= dout_wait +1;
                 end if;
-    
+            end if;
         end if;
     end process;
 
+
+    dout_cnt_n_FSM: process (clk, reset_or_clear, y)
+    begin  -- process
+        if y=WAIT_READ or y=READ then
+            if falling_edge(clk) then
+                if  dout_wait=5 or dout_wait=6 then
+                    dout_wait <= dout_wait +1;
+                    dout_valid <= '1';
+                elsif dout_wait=7 then
+                    dout_wait <= dout_wait +1;
+                    dout_valid <= '0';
+                 elsif dout_wait=8 then
+                    dout_wait <= 0;
+                    dout_valid <= '0';
+                else
+                    dout_wait <= dout_wait +1;
+                end if;
+            end if;
+        end if;
+    end process;
 
     ---ntt_intt processes----------------------------------------------------------
     ntt_intt_1: process (clk, reset_or_clear)
