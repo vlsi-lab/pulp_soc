@@ -274,7 +274,7 @@ begin
         if y=IDLE then
             if reset_or_clear = '1' then -- asynchronous reset (active high)
                 dout_wait_r <= 1;
-                dout_valid_r_r <= '0';
+                dout_valid_r <= '0';
             end if;
         elsif y=WAIT_READ or y=READ then
             if rising_edge(clk) then
