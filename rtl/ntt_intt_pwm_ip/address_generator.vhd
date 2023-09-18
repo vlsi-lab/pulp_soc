@@ -90,7 +90,7 @@ begin
         --------------------RESET----------------------------------------------------
         if rst = '1' then
             y <= IDLE;
-        elsif clk'event and clk = '1' then  -- rising clock edge
+        elsif rising_edge(clk) then  -- rising clock edge
             case y is
                 --IDLE---------------------------------------------------------------
                 when IDLE =>
@@ -144,7 +144,7 @@ begin
             c_tw_minus1 := (others=>'0');
             c_tw_1 := (others=>'0');
 
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
 
             c_tw_plus1 := std_logic_vector(unsigned(c_tw) + to_unsigned(1,9));
             c_tw_minus1 := std_logic_vector(unsigned(c_tw) - to_unsigned(1,9));
@@ -353,7 +353,7 @@ begin
     begin
         if (rst = '1') then
             raddr(7) <= '0'; -- alternating addressing between stages
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             if (start_fntt = '1' or start_pwm2 = '1' or start_intt = '1') then
                 if start_fntt='1' then
                     raddr(7) <= '0';
@@ -392,7 +392,7 @@ begin
             temp2_cloop := (others => '0');
             temp2_FNTT_sum := (others => '0');
 
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             --iterators
             --temp2_a := std_logic_vector(to_unsigned(6,3) - unsigned(c_stage)); --(6-c_stage)
             --temp2_b := std_logic_vector(to_unsigned(7,3) - unsigned(c_stage)); --(7-c_stage)
@@ -523,7 +523,7 @@ begin
     begin
         if (rst = '1') then
             raddr_b_w <= (others=>'0');
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             if (y = PWM2) then
                 temp3 := c_loop(6 downto 1) & '0';
                 raddr_b_w <= std_logic_vector(unsigned(c_pwm(0 downto 0)) + unsigned(temp3));
@@ -544,7 +544,7 @@ begin
         if (rst = '1') then
             waddre(7) <= '0';
             waddro(7) <= '0';
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             if start_fntt = '1' or start_pwm2 = '1' or start_intt = '1' then
                 if start_fntt = '1' or start_pwm2 = '1' then
                     waddre(7) <= '1';
@@ -592,7 +592,7 @@ begin
             brsel <= "0";
             brselen <= "0";
 
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
 
             temp5_cloop := '0' & c_loop(6 downto 1);    
             temp5_c := std_logic_vector(to_unsigned(1,3) + unsigned(c_stage)); --(c_stage+1)
@@ -730,7 +730,7 @@ begin
     -----CT, PWM
     addressgenerator_process_3: process (clk)
     begin
-        if clk'event and clk = '1' then
+        if rising_edge(clk) then
             if (rst = '1') then
                 b_ct <= "0";
                 b_pwm <= "0";
@@ -959,7 +959,7 @@ begin
             stage_count_pwm <= (others=>'0');
             c_loop_pwm <= (others=>'0');
 
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             CT              <= ctd0(0);
             PWM             <= pwmd0(0);
             raddr0          <= raddr;

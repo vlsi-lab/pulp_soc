@@ -122,7 +122,7 @@ begin  -- Rtl
             counter_nr_rounds <= (others => '0');
             permutation_computed <='1';
             compute_permutation <= '0';
-        elsif clk'event and clk = '1' then  -- rising clk edge
+        elsif rising_edge(clk) then  -- rising clk edge
 
             if (start_i='1') then
                 --reg_data <= zero_state;

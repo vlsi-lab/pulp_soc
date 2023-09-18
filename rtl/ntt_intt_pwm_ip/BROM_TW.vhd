@@ -18,7 +18,7 @@ begin
     -- read operation
     process(clk)
     begin
-        if clk'event and clk = '1' then
+        if rising_edge(clk) then
             case(raddr) is
                 when "000000000" => dout <= x"fbec";
                 when "000000001" => dout <= x"fd0a";

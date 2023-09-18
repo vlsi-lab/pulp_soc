@@ -205,7 +205,7 @@ begin
             y <= IDLE;
             PWM_TW <= '0';
 
-        elsif clk'event and clk = '1' then  -- rising clock edge
+        elsif rising_edge(clk) then  -- rising clock edge
             case y is
                 when IDLE =>
                     if load_signals_1(3) = '1' or load_signals_1(2) = '1' or load_signals_1(1) = '1' or load_signals_1(0) = '1' then
@@ -300,7 +300,7 @@ begin
     begin
         if (reset_or_clear = '1') then
             load_type <= '0';
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             if load_signals_1(2) = '1' or load_signals_1(0) = '1' then
                 load_type <= '1';
             elsif y = LOAD then
@@ -315,7 +315,7 @@ begin
     begin
         if (reset_or_clear = '1') then
             op_out_a <= '0';
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             if start_fntt = '1' and start_ab = '0' then
                 op_out_a <= '1'; --Doing FNTT (output will be at address 1)
             elsif start_pwm2 = '1' and start_ab = '0' then
@@ -332,7 +332,7 @@ begin
     begin
         if (reset_or_clear = '1') then
             op_out_b <= '0';
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             if start_fntt = '1' and start_ab = '1' then
                 op_out_b <= '1'; --Doing FNTT (output will be at address 1)
             elsif start_pwm2 = '1' and start_ab = '1' then
@@ -351,7 +351,7 @@ begin
             load_ab <= '0';
             read_ab <= '0';
             exec_ab <= '0';
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             --load
             if(load_signals_1(3)='1' or load_signals_1(2)='1' ) then
                 load_ab <= '0';
@@ -393,7 +393,7 @@ begin
             op_cnt <= (others=>'0');
             din_split_data <= 0;
             enable_ram <= '1';
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             if y=IDLE then
                 din_split_data <= 0;
             end if;
@@ -454,7 +454,7 @@ begin
     begin
         if (reset_or_clear = '1') then
             t_r <= (others=>'0');
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             t_r <= raddr_tw;
         end if;
     end process;
@@ -703,7 +703,7 @@ begin
             W   <= (others=>'0');
             CT  <= '0';
             PWM <= '0';
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             if y=FNTT or y=INTT then
                 if exec_ab='0' then
                     A <= do0_0;
@@ -779,7 +779,7 @@ begin
     begin
         if (reset_or_clear = '1') then
             done_sig <= '0';
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             case y is
                 when FNTT =>
                     if op_cnt = FNTT_CC-1 then
@@ -886,7 +886,7 @@ begin
     begin
         if (reset_or_clear = '1') then
             dout_temp <= (others=>'0');
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             if y=READ then
                 
                  dout_temp <= dout_temp;

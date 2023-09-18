@@ -20,7 +20,7 @@ begin
     begin
         if rst = '1' then
             P <= (others => '0');
-        elsif clk'event and clk = '1' then
+        elsif rising_edge(clk) then
             P <= std_logic_vector(signed(A) * signed(B));
         end if;
     end process;
