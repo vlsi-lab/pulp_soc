@@ -277,7 +277,6 @@ begin
                 dout_valid <= '0';
             end if;
         elsif y=WAIT_READ or y=READ then
-            if rising_edge(clk) or falling_edge(clk) then
                 if  dout_wait=5 or dout_wait=6 then
                     dout_wait <= dout_wait +1;
                     dout_valid <= '1';
@@ -290,7 +289,6 @@ begin
                 else
                     dout_wait <= dout_wait +1;
                 end if;
-            end if;
         end if;
     end process;  
 --    
